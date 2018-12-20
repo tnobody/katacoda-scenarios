@@ -19,7 +19,7 @@ mvn archetype:generate -B \
     -DartifactId=citrus-sample \
     -Dversion=1.0-SNAPSHOT \
     -Dpackage=com.company.citrus
-`{{command}}
+`{{execute}}
 
 The archetype process requires some project information such as the groupId, artifactId and version of the new project.
 The command executes the project archetype **citrus-quickstart** and creates the new project in the folder 
