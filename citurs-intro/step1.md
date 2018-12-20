@@ -1,8 +1,26 @@
-## System under test
-The system under test, we want to perform our integration tests on, is a simple todo app with a few endpoints allowing 
-us to communicate with other software components (e.g. a frontend). The sample application has already been prepared 
-and is ready to run. 
+This quickstart tutorial shows you how to setup a Citrus Project with Maven.
 
-Let's open the todo-app in the web view component. [weblink](/_/http://todo-app.paas.consol.de/todolist) 
+Citrus as a framework integrates best with build tools like Maven or Gradle. These tools can help you to manage the
+project sources and all required dependencies in order to compile, package and execute the tests in your project.
 
-You can create new todo entries, check them as done and remove the entries from the list.
+## Maven archetype
+
+Citrus provides several Maven archetypes that can be used as a starting point for creating a new Citrus project. The
+archetypes create all required source files and directories for you.
+ 
+You can call the archetype in order to create a new project with:
+ 
+```
+mvn archetype:generate -B \
+    -DarchetypeGroupId=com.consol.citrus.mvn \
+    -DarchetypeArtifactId=citrus-quickstart \
+    -DarchetypeVersion=2.7.1 \
+    -DgroupId=com.company \
+    -DartifactId=citrus-sample \
+    -Dversion=1.0-SNAPSHOT \
+    -Dpackage=com.company.citrus
+```{{command}}
+
+The archetype process requires some project information such as the groupId, artifactId and version of the new project.
+The command executes the project archetype **citrus-quickstart** and creates the new project in the folder 
+**citrus-sample**, named after the _artifactId_ of the _mvn archetype:generate_ command.
