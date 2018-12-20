@@ -10,7 +10,7 @@ archetypes create all required source files and directories for you.
  
 You can call the archetype in order to create a new project with:
  
-```
+`
 mvn archetype:generate -B \
     -DarchetypeGroupId=com.consol.citrus.mvn \
     -DarchetypeArtifactId=citrus-quickstart \
@@ -19,7 +19,7 @@ mvn archetype:generate -B \
     -DartifactId=citrus-sample \
     -Dversion=1.0-SNAPSHOT \
     -Dpackage=com.company.citrus
-```{{command}}
+`{{command}}
 
 The archetype process requires some project information such as the groupId, artifactId and version of the new project.
 The command executes the project archetype **citrus-quickstart** and creates the new project in the folder 
