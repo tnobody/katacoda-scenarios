@@ -1,7 +1,6 @@
-rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/SampleJavaIT.java > /dev/null
-rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/SampleXmlIT.java > /dev/null
+rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/SampleJavaIT.java
+rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/SampleXmlIT.java
 
-echo "Removed sample Tests"
 
 cat > "/home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java" <<- EOM
 package org.citrus.samples;
@@ -33,6 +32,4 @@ public class TodoAppIT extends TestNGCitrusTestDesigner {
     }
 }
 
-EOM > /dev/null
-
-echo "Add TodoApp Test"
+EOM

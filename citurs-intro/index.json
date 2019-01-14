@@ -11,7 +11,7 @@
       {
         "title": "Step 2",
         "text": "step2.md",
-        "code": "step2-setup.sh",
+        "courseData": "step2-setup.sh",
         "verify": "step1-verify.sh"
       },
       {

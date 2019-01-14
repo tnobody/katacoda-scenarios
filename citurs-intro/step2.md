@@ -17,7 +17,7 @@ _To find out more about the Spring framework, please visit the [official website
 
 Now, add the new HTTP client component and safe the file.
 <pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml" data-target="insert" data-marker="<!-- Common settings -->">
-    &lt;citrus-http:client id="todoClient" request-url="http://todo-app.paas.consol.de" /&gt;
+&lt;citrus-http:client id="todoClient" request-url="http://todo-app.paas.consol.de" /&gt;
 </pre>
 
 The HTTP client component is now ready to exchange HTTP messages with the todo application. 
