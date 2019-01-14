@@ -14,49 +14,6 @@ http()
            .get("/api/todolist/");
 </pre>
 
-<!--
-```java
-package org.citrus.samples;
-
-import org.testng.annotations.Test;
-
-import com.consol.citrus.annotations.CitrusTest;
-import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
-import com.consol.citrus.http.client.HttpClient;
-import com.consol.citrus.message.MessageType;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-
-public class TodoAppIT extends TestNGCitrusTestDesigner {
-
-    @Autowired
-    private HttpClient todoClient;
-    
-    @Test
-    @CitrusTest
-    public void testGet() {
-       http()
-           .client(todoClient)
-           .send()
-           .get("/api/todolist/");
-
-        http()
-           .client(todoClient)
-           .receive()
-           .response(HttpStatus.OK);
-    }
-    
-    @Test
-    @CitrusTest
-    public void testTodoLifecycle() {
-        // TODO code the test
-    }
-}
-```
-[editor](/edit/replace?file=app-tests/src/test/java/org/citrus/samples/TodoAppIT.java)
-[editor](/save?file=app-tests/src/test/java/org/citrus/samples/TodoAppIT.java)
--->
 The test sends a **HTTP GET** request via the **todoClient** to the todo application. This **GET** request gets answered
 with the current list of todo entries, which is basically a json document.
 
