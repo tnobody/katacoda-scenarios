@@ -10,8 +10,10 @@ function verifyContent() {
 JAVA_TEST=/home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java
 XML_CONFIG=/home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-context.xml
 
-#TEST1=/Users/timkeiner/Projects/consol/github/katacoda-scenarios/citurs-intro/intro.md
-#verifyContent $TEST1 "System X under test" && \
+TEST1=/Users/timkeiner/Projects/consol/github/katacoda-scenarios/TodoAppIT.java
+TEST2=/Users/timkeiner/Projects/consol/github/katacoda-scenarios/citrus-context.xml
+#verifyContent $TEST1 "private HttpClient todoClient;" && \
+#verifyContent $TEST2 "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />" && \
 verifyContent $JAVA_TEST "private HttpClient todoClient" && \
-verifyContent $XML_CONFIG "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />" && \
+verifyContent $XML_CONFIG "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />"
 echo "done"
