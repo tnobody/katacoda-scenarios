@@ -9,17 +9,16 @@ To communicate with the REST API of the todo app in our tests, a HTTP client is 
 provides ready-to-use endpoints for exchanging messages over various transports. The only thing we have to do, is to 
 configure them in the test project.
 
-Please open the `citrus-context.xml`[editor](/open?file=app-tests/src/test/resources/citrus-context.xml) in the editor.
+Please open the ``citrus-sample/src/test/resources/citrus-context.xml``{{open}} in the editor.
 
 The file shows a Spring XML bean configuration. You can add and manage Citrus components by adding or modifying these beans.
 
 _To find out more about the Spring framework, please visit the [official website](https://spring.io/)._
 
 Now, add the new HTTP client component and safe the file.
-<pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml"><![CDATA[
-    <citrus-http:client id="todoClient"
-                request-url="http://todo-app.paas.consol.de"/>
-]]>
+<pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml" data-target="insert">
+    &lt;citrus-http:client id="todoClient"
+                request-url="http://todo-app.paas.consol.de"/&gt;
 </pre>
 <!-- [editor](/edit/add?file=app-tests/src/test/resources/citrus-context.xml&line=15) -->
 <!-- [editor](/save?file=app-tests/src/test/resources/citrus-context.xml) -->
