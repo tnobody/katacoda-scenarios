@@ -10,7 +10,8 @@
       },
       {
         "title": "Step 2",
-        "text": "step2.md"
+        "text": "step2.md",
+        "courseData": "step2-setup.sh"
       },
       {
         "title": "Step 3",

@@ -28,18 +28,17 @@ _Please note that you could also use Spring @Configuration classes to create Cit
 ## Add the HTTP client to the test class
 
 Now, let us add the previously created Citrus HTTP client to our test class.
+For this tutorial we removed the default sample test classes shipped with the archetype and provided skeleton baseclass for your test in TodAppIT.java.
 Therefore, please open the file ``citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java``{{open}}.
 
 As you can see, we prepared a test class for you that contains two _@CitrusTest_ test cases. One will be a simple **GET**
 request while the other will test a complete workflow of the todo app.
  
 Now, please add the prepared HTTP client.
-```java
+<pre class="file" data-filename="citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java" data-target="insert" data-marker="// TODO: add todoClient">
     @Autowired
     private HttpClient todoClient;
-``` 
-[editor](/edit/add?file=app-tests/src/test/java/org/citrus/samples/TodoAppIT.java&line=14)
-[editor](/save?file=app-tests/src/test/java/org/citrus/samples/TodoAppIT.java)
+</pre>
 
 The HTTP client endpoint component is automatically injected to the test using Spring's _@Autowired_ dependency
 injection mechanism.
