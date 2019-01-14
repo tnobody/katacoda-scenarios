@@ -12,6 +12,12 @@ http()
            .client(todoClient)
            .send()
            .get("/api/todolist/");
+
+        http()
+           .client(todoClient)
+           .receive()
+           .response(HttpStatus.OK);
+
 </pre>
 
 The test sends a **HTTP GET** request via the **todoClient** to the todo application. This **GET** request gets answered
