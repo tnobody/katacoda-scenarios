@@ -24,12 +24,12 @@ only expects a **HTTP 200 OK** response from the server.
 
 You can run all Citrus tests with Maven by calling
  
-`mvn clean verify -f app-tests/pom.xml`{{execute}}
+`mvn clean verify -f citrus-sample/pom.xml`{{execute}}
 
 You will see some log out put in the terminal window showing the incoming request processing.
 
 You can also start a single test by adding its name to the command:
 
-`mvn clean verify -f app-tests/pom.xml -Dit.test=TodoAppIT#testGet`{{execute}}
+`mvn clean verify -f citrus-sample/pom.xml -Dit.test=TodoAppIT#testGet`{{execute}}
 
 This will only execute the **testGet** test.
