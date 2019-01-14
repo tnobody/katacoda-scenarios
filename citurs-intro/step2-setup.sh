@@ -4,7 +4,7 @@ rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/Sampl
 rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/SampleXmlIT.java
 
 touch /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java
-cat > /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java <<- EOM
+cat > /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java << EOM
 package org.citrus.samples;
 
 import org.testng.annotations.Test;
@@ -27,11 +27,6 @@ public class TodoAppIT extends TestNGCitrusTestDesigner {
         // TODO: implement testGet
     }
 
-    @Test
-    @CitrusTest
-    public void testTodoLifecycle() {
-        // TODO: implement testTodoLifecycle
-    }
 }
 
 EOM
