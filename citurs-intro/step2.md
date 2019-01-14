@@ -17,12 +17,9 @@ _To find out more about the Spring framework, please visit the [official website
 
 Now, add the new HTTP client component and safe the file.
 <pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml" data-target="insert" data-marker="<!-- Common settings -->">
-&lt;citrus-http:client id="todoClient"
-    request-url="http://todo-app.paas.consol.de" 
-/&gt;
+&lt;-- Common settings --&gt;
+&lt;citrus-http:client id="todoClient" request-url="http://todo-app.paas.consol.de" /&gt;
 </pre>
-<!-- [editor](/edit/add?file=app-tests/src/test/resources/citrus-context.xml&line=15) -->
-<!-- [editor](/save?file=app-tests/src/test/resources/citrus-context.xml) -->
 
 The HTTP client component is now ready to exchange HTTP messages with the todo application. 
 
@@ -31,8 +28,7 @@ _Please note that you could also use Spring @Configuration classes to create Cit
 ## Add the HTTP client to the test class
 
 Now, let us add the previously created Citrus HTTP client to our test class.
-Therefore, please open the file `TodoAppIT.java`
-[editor](/open?file=app-tests/src/test/java/org/citrus/samples/TodoAppIT.java).
+Therefore, please open the file ``citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java``{{open}}.
 
 As you can see, we prepared a test class for you that contains two _@CitrusTest_ test cases. One will be a simple **GET**
 request while the other will test a complete workflow of the todo app.
