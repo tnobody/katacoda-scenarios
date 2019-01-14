@@ -1,19 +1,5 @@
 #!/bin/bash
 
-function verifyContent() {
-    FILE=$1
-    NEEDLE=$2
-
-    cat ${FILE} | grep "${NEEDLE}" > /dev/null
-}
-
-JAVA_TEST=/home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java
-XML_CONFIG=/home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-context.xml
-
-TEST1=/Users/timkeiner/Projects/consol/github/katacoda-scenarios/TodoAppIT.java
-TEST2=/Users/timkeiner/Projects/consol/github/katacoda-scenarios/citrus-context.xml
-#verifyContent $TEST1 "private HttpClient todoClient;" && \
-#verifyContent $TEST2 "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />" && \
-verifyContent $JAVA_TEST "private HttpClient todoClient" && \
-verifyContent $XML_CONFIG "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />"
+grep -Fq "private HttpClient todoClient;" /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java && \
+grep -Fq "<citrus-http:client id=\"todoClient\" request-url=\"http://todo-app.paas.consol.de\" />" /home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-context.xml && \
 echo "done"
