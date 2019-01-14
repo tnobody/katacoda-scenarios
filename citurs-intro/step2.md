@@ -17,7 +17,6 @@ _To find out more about the Spring framework, please visit the [official website
 
 Now, add the new HTTP client component and safe the file.
 <pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml" data-target="insert" data-marker="<!-- Common settings -->">
-&lt;-- Common settings --&gt;
     &lt;citrus-http:client id="todoClient" request-url="http://todo-app.paas.consol.de" /&gt;
 </pre>
 
@@ -36,7 +35,7 @@ request while the other will test a complete workflow of the todo app.
  
 Now, please add the prepared HTTP client.
 <pre class="file" data-filename="citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java" data-target="insert" data-marker="// TODO: add todoClient">
-    @Autowired
+@Autowired
     private HttpClient todoClient;
 </pre>
 
