@@ -7,13 +7,13 @@ class from **TestNGCitrusTestDesigner**.
 _Please note that you could also use JUnit in combination with Citrus._
 
 At first, lets test whether the TodoApp is responsive, by requesting the list of current todo entries from the apps API. 
-<pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml" data-target="insert" data-marker="// TODO: implement testGet">
+<pre class="file" data-filename="citrus-sample/src/test/java/org/citrus/samples/TodoAppIT.java" data-target="insert" data-marker="// TODO: implement testGet">
 http()
            .client(todoClient)
            .send()
            .get("/api/todolist/");
-
 </pre>
+
 <!--
 ```java
 package org.citrus.samples;
