@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function verifyContent() {
     FILE=$1
     NEEDLE=$2
