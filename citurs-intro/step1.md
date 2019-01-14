@@ -15,10 +15,10 @@ mvn archetype:generate -B \
     -DarchetypeGroupId=com.consol.citrus.mvn \
     -DarchetypeArtifactId=citrus-quickstart \
     -DarchetypeVersion=2.7.1 \
-    -DgroupId=com.company \
+    -DgroupId=org.citrus \
     -DartifactId=citrus-sample \
     -Dversion=1.0-SNAPSHOT \
-    -Dpackage=com.company.citrus
+    -Dpackage=org.citrus.samples
 `{{execute}}
 
 The archetype process requires some project information such as the groupId, artifactId and version of the new project.
