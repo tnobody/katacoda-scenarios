@@ -16,12 +16,12 @@ The file shows a Spring XML bean configuration. You can add and manage Citrus co
 _To find out more about the Spring framework, please visit the [official website](https://spring.io/)._
 
 Now, add the new HTTP client component and safe the file.
-```xml
+<pre class="file" data-filename="citrus-sample/src/test/resources/citrus-context.xml">
     <citrus-http:client id="todoClient"
                 request-url="http://todo-app.paas.consol.de"/>
-```
-[editor](/edit/add?file=app-tests/src/test/resources/citrus-context.xml&line=15)
-[editor](/save?file=app-tests/src/test/resources/citrus-context.xml)
+</pre>
+<!-- [editor](/edit/add?file=app-tests/src/test/resources/citrus-context.xml&line=15) -->
+<!-- [editor](/save?file=app-tests/src/test/resources/citrus-context.xml) -->
 
 The HTTP client component is now ready to exchange HTTP messages with the todo application. 
 
