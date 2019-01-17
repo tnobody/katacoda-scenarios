@@ -1,7 +1,6 @@
-As the sample application is up and running, we can now start developing some integration tests. These tests will call
-the HTTP REST API of the todo app as a client and validate the server response messages.
+As we have a basic setup, we can now start developing some integration tests. These tests will call the HTTP REST API of the todo app as a client and validate the server response messages.
 
-A basic Citrus project has already been prepared, so that we can start right away.
+A basic Citrus test has already been prepared, so that we can start right away.
 
 ## Add a HTTP client component
 
