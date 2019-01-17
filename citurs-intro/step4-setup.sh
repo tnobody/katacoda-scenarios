@@ -25,9 +25,9 @@ public class TodoAppLifecycleIT extends TestNGCitrusTestDesigner {
             .post("/api/todolist")
             .messageType(MessageType.JSON)
             .contentType("application/json")
-            .payload("{ \"id\": \"${todoId}\", " +
-                    "\"title\": \"${todoName}\", " +
-                    "\"description\": \"${todoDescription}\", " +
+            .payload("{ \"id\": \"\${todoId}\", " +
+                    "\"title\": \"\${todoName}\", " +
+                    "\"description\": \"\${todoDescription}\", " +
                     "\"done\": false}");
         http()
             .client(todoClient)
@@ -38,21 +38,21 @@ public class TodoAppLifecycleIT extends TestNGCitrusTestDesigner {
         http()
             .client(todoClient)
             .send()
-            .get("/api/todo/${todoId}")
+            .get("/api/todo/\${todoId}")
             .accept("application/json");
         http()
             .client(todoClient)
             .receive()
             .response(HttpStatus.OK)
             .messageType(MessageType.JSON)
-            .validate("$.id", "${todoId}")
-            .validate("$.title", "${todoName}")
-            .validate("$.description", "${todoDescription}")
+            .validate("$.id", "\${todoId}")
+            .validate("$.title", "\${todoName}")
+            .validate("$.description", "\${todoDescription}")
             .validate("$.done", false);
         http()
             .client(todoClient)
             .send()
-            .delete("/api/todo/${todoId}")
+            .delete("/api/todo/\${todoId}")
             .accept("application/json");
         http()
             .client(todoClient)
