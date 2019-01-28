@@ -3,10 +3,7 @@
   "description": "A brief introduction about testing distributed systems with Citrus Testing Framework",
   "details": {
     "steps": [
-      {
-        "title": "Setup SUT",
-        "text": "step-0.md"        
-      },
+      
       {
         "title": "Step 1",
         "text": "step1.md",
@@ -38,6 +35,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "3-11-cluster"
+    "imageid": "java"
   }
 }

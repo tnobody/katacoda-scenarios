@@ -6,7 +6,17 @@ We prepared a simple api-application on [Github](https://github.com/tnobody/todo
 
 Thanks to Openshifts capabilites to deploy applications from a Dockerfile this requires only a few steps.
 
-First of all you need a Openshift Project, so execute 
+First of all you need a Openshift Project, so login to the OpenShift cluster:
+
+`
+oc login -u developer -p developer
+`{{execute}}
+
+This will log you in using the credentials:
+- __Username__: `developer`
+- __Password__: `developer`
+
+Then run
 
 `
 oc new-project todo-api-sut
@@ -20,9 +30,16 @@ Now you can deploy he application by the Dockerfile directly from Github.
 oc new-app https://github.com/tnobody/todo-example-api.git --name=todo-api --image-stream=openshift/nodejs:latest
 `{{execute}}
 
+Since the deployment might take a little time you can follow the progress with:
+
+`
+oc logs bc/todo-api --follow
+`{{execute}}
+
 This will create the application on Openshift. To have access to this application as an endpoint you have to create a Route with:
 
 `
 oc expose svc/todo-api
 `{{execute}}
 
+If everything works fine you should access the [index page](http://todo-api-todo-api-project.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com).
