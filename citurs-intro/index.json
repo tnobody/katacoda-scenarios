@@ -4,6 +4,10 @@
   "details": {
     "steps": [
       {
+        "title": "Setup SUT",
+        "text": "step-0.md"        
+      },
+      {
         "title": "Step 1",
         "text": "step1.md",
         "verify": "step1-verify.sh"
@@ -34,6 +38,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "java"
+    "imageid": "3-11-cluster"
   }
 }
