@@ -29,10 +29,10 @@ public class TodoAppLifecycleIT extends TestNGCitrusTestRunner {
             .post("/api/todolist")
             .messageType(MessageType.JSON)
             .contentType("application/json")
-            .payload("{ \"id\": \"${todoId}\", " + 
-                        "\"title\": \"${todoName}\", " + 
-                        "\"description\": \"${todoDescription}\", " + 
-                        "\"done\": false}"
+             .payload("{ \"id\": \"\${todoId}\", " +
+                    "\"title\": \"\${todoName}\", " +
+                    "\"description\": \"\${todoDescription}\", " +
+                    "\"done\": false}"
             ));
 
         http(http -> http
@@ -45,18 +45,23 @@ public class TodoAppLifecycleIT extends TestNGCitrusTestRunner {
         http(http -> http
             .client(todoClient)
             .send()
-            .get("/api/todo/${todoId}")
+            .get("/api/todo/\${todoId}")
             .accept("application/json"));
 
         http(http -> http
-            .client(todoClient).receive().response(HttpStatus.OK).messageType(MessageType.JSON)
-            .validate("$.id", "${todoId}").validate("$.title", "${todoName}")
-            .validate("$.description", "${todoDescription}").validate("$.done", false));
+            .client(todoClient)
+            .receive()
+            .response(HttpStatus.OK)
+            .messageType(MessageType.JSON)
+            .validate("$.id", "\${todoId}")
+            .validate("$.title", "\${todoName}")
+            .validate("$.description", "\${todoDescription}")
+            .validate("$.done", false));
 
         http(http -> http
             .client(todoClient)
             .send()
-            .delete("/api/todo/${todoId}")
+            .delete("/api/todo/\${todoId}")
             .accept("application/json"));
 
         http(http -> http
@@ -65,6 +70,7 @@ public class TodoAppLifecycleIT extends TestNGCitrusTestRunner {
             .response(HttpStatus.OK));
     }
 }
+
 
 EOM
 
