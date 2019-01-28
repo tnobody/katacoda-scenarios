@@ -5,6 +5,10 @@ rm /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/Sampl
 rm /home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-context.xml
 rm -rf /home/scrapbook/tutorial/citrus-sample/src/test/resources/org/
 
+touch /home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-application.properties
+cat > /home/scrapbook/tutorial/citrus-sample/src/test/resources/citrus-application.properties << "citrus.spring.java.config=org.citrus.samples.EndpointConfig"
+
+
 touch /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/EndpointConfig.java
 cat > /home/scrapbook/tutorial/citrus-sample/src/test/java/org/citrus/samples/EndpointConfig.java << EOM
 package org.citrus.samples;
