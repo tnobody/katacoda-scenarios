@@ -6,7 +6,7 @@
       {
         "title": "Deploy to OpenShift",
         "text": "step-0.md",
-        "code": "env-init.sh"
+        "code": "install-java-mvn.sh"
       },
       {
         "title": "Step 1",
