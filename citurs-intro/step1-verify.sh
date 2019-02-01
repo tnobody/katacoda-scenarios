@@ -1,1 +1,1 @@
-[ -d /home/scrapbook/tutorial/citrus-sample ] && echo "done"
+[ -d /root/citrus-sample ] && echo "done"
