@@ -38,6 +38,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "java"
+    "imageid": "openshift"
   }
 }
