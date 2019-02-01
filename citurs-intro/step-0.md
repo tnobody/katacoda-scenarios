@@ -27,7 +27,7 @@ to create a new Project __todo-api-sut__ in Openshift (this project is automatic
 Now you can deploy he application by the Dockerfile directly from Github.
 
 `
-oc new-app https://github.com/tnobody/todo-example-api.git --name=todo-api --image-stream=openshift/nodejs:latest
+oc new-app https://github.com/tnobody/todo-example-api.git --name=todo-api
 `{{execute}}
 
 Since the deployment might take a little time you can follow the progress with:
