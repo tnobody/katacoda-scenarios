@@ -42,4 +42,5 @@ This will create the application on Openshift. To have access to this applicatio
 oc expose svc/todo-api
 `{{execute}}
 
-If everything works fine you should access the [index page](http://todo-api-todo-api-project.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com).
+If everything works fine you should access the [index page]
+(http://todo-api-todo-api-sut.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com).
