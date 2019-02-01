@@ -3,7 +3,10 @@
   "description": "A brief introduction about testing distributed systems with Citrus Testing Framework",
   "details": {
     "steps": [
-      
+      {
+        "title": "Deploy to OpenShift",
+        "text": "step-0.md"
+      },
       {
         "title": "Step 1",
         "text": "step1.md",
