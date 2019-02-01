@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Deploy to OpenShift",
-        "text": "step-0.md"
+        "text": "step-0.md",
+        "code": "env-init.sh"
       },
       {
         "title": "Step 1",
