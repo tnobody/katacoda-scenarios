@@ -11,7 +11,7 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "verify": "step1-verify.sh"
+        "$verify": "step1-verify.sh"
       },
       {
         "title": "Step 2",
